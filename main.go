@@ -74,5 +74,4 @@ func main() {
 	fmt.Printf("Before: %v\n", rn)
 	bubbleSort(rn, reverseSweep)
 	fmt.Printf("After: %v\n", rn)
-
 }
