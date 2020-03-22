@@ -2,13 +2,13 @@ package main
 
 import "fmt"
 
-func sweep(numbers []int) {
+func sweep(numbers []int, prevPasses int) {
 	N := len(numbers)
 
 	firstIndex := 0
 	secondIndex := 1
 
-	for secondIndex < N {
+	for secondIndex < (N - prevPasses) {
 		n1 := numbers[firstIndex]
 		n2 := numbers[secondIndex]
 
@@ -27,7 +27,7 @@ func bubbleSort(numbers []int) {
 	N := len(numbers)
 
 	for i := 0; i < N; i++ {
-		sweep(numbers)
+		sweep(numbers, i)
 	}
 
 	fmt.Printf("After: %v", numbers)
