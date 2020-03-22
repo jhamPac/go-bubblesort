@@ -3,7 +3,6 @@ package main
 import "fmt"
 
 func bubbleSort(numbers []int) {
-	fmt.Printf("Before: %v\n", numbers)
 	N := len(numbers)
 
 	for i := 0; i < N; i++ {
@@ -11,8 +10,6 @@ func bubbleSort(numbers []int) {
 			return
 		}
 	}
-
-	fmt.Printf("After: %v", numbers)
 }
 
 func sweep(numbers []int, prevPasses int) bool {
@@ -41,5 +38,7 @@ func main() {
 	n := []int{
 		2, 3, 7, 5, 8, 1,
 	}
+	fmt.Printf("Before: %v\n", n)
 	bubbleSort(n)
+	fmt.Printf("After: %v", n)
 }
